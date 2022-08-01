@@ -1,0 +1,147 @@
+<html>
+
+<head>
+  <title>THE SALVATORS</title>
+  <style>
+    nav {
+      border-bottom: 1px solid black;
+    }
+    * {
+      box-sizing: border-box;
+    }
+
+    .column {
+      float: left;
+      width: 33.33%;
+      padding: 10px;
+      height: 300px;
+    }
+
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    .crumbs ol {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    .crumb {
+      display: inline-block;
+    }
+
+    .crumb a::after {
+      display: inline-block;
+      color: #000;
+      content: '|';
+      font-size: 100%;
+      font-weight: bold;
+    }
+
+    #search-bar {
+      margin-top: 1px;
+    }
+
+    .page-title {
+      padding-right: 50px;
+      margin-top: 17px;
+    }
+
+    .menu-item {
+      margin-top: 25px;
+    }
+  </style>
+  <center><img
+      src="data:image/jpeg;base64,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"
+      jsaction="load:XAeZkd;" jsname="HiaYvf" class="n3VNCb" alt="The Salvatore Brothers - TVD - Home | Facebook"
+      data-noaft="1" style="width: 70px; height: 70px; margin: 0px;"></center>
+  <hr>
+</head>
+
+<body>
+  <td>
+    <h1 style="text-align:center" class="b">THE SALVATORS</h1>
+  </td>
+  <nav class="crumbs">
+    <ol>
+      <li class="crumb"><a href="#">link 1</a></li>
+      <li class="crumb"><a href="#">link 2</a></li>
+      <li class="crumb"><a href="#">link 3</a></li>
+      <li id="search-bar" align="right">
+        <form class="navbar-form navbar-left" role="search">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Search">
+          </div>
+    </ol>
+  </nav>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    .column {
+      float: left;
+      width: 50%;
+      padding: 10px;
+      height: 300px;
+    }
+
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  </style>
+  <div class="row">
+    <div class="column" style="">
+      <iframe width="460" height="290" src="https://youtube.com/embed/R_xeZvHkop4" title="YouTube video player"
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
+    <div class="column" style="">
+      <h2>THE SALVATORS</h2>
+      <p>The salvators is an ambitious and innovative, 21st century Fashion designing Company started by Brothers,
+        enthusiastic and highly skilled engineers.
+
+        The salvators was started with the aim of helping customers and business to producing fashion products without
+        impacting the quality. We are a one Fashion company who can work with focus and aim of cost saving without
+        compromising the quality.
+      </p>
+      <audio controls autoplay>
+        <source src="Hello_brother.mp3" type="audio/mpeg">
+      </audio>
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="column" style="">
+      <form>
+        <fieldset>
+          <legend><b>Sign up</b></legend>
+          <label>User Name :</label><input type="text" placeholder="username"><br><br>
+          <label>Password :</label><input type="text" placeholder="password"><br><br>
+          <a href="Resume.html" target="_blank">Register</a>
+      </form>
+      </fieldset>
+    </div>
+    <div class="column" style="">
+      <h2>Contact us</h2>
+      <p>THE SALVATORS,</p>
+      <p>Coimbatore,</p>
+      <p>India.</p>
+      <p>Mail id:thesalfashion@gmail.com</p>
+      <p>Phone no:+91 987654321</p>
+    </div>
+    <div class="column" style="">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125323.47388556498!2d76.8971943543086!3d11.011701573390432!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba859af2f971cb5%3A0x2fc1c81e183ed282!2sCoimbatore%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1658853255542!5m2!1sen!2sin"
+        width="400" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</body>
+
+</html>
