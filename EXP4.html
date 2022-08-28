@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exp-4| Responsive web design using Bootstrap UI Framework</title>
+
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/rubnagino-favicon-logo.png">
+
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg bg-light fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="logo.png" alt="Navbar-brand-icon" width="32" height="32"
+                        class="d-inline-block align-text-top"> URK20CS2005</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#services">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link">Clients</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link">Contact Us</a>
+                        </li>
+
+                    </ul>
+                    <form class="d-flex search" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-primary" type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Carousel Section -->
+    <section class="carousel-section">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+                    aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
+                    aria-label="Slide 5"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="image1.jpg" class="d-block w-100" alt="carousel-image-1" height="500px" width="400px">
+                </div>
+                <div class="carousel-item">
+                    <img src="image2.jpg" class="d-block w-100" alt="carousel-image-2" height="500px" width="400px">
+                </div>
+                <div class="carousel-item">
+                    <img src="image3.jpg" class="d-block w-100" alt="carousel-image-3" height="500px" width="400px">
+                </div>
+                <div class="carousel-item">
+                    <img src="image4.jpg" alt="carousel-image-4" class="d-block w-100" height="500px" width="400px">
+                </div>
+                <div class="carousel-item">
+                    <img src="image5.jpg" alt="carousel-image-5" class="d-block w-100" height="500px" width="400px">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+
+    <section id="services" class="form-table">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6">
+                    <form class="row g-3 form">
+                        <div class="col-md-6">
+                            <label for="inputEmail4" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="inputEmail4">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputPassword4" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="inputPassword4">
+                        </div>
+                        <div class="col-12">
+                            <label for="inputAddress" class="form-label">Address</label>
+                            <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                        </div>
+                        <div class="col-12">
+                            <label for="inputAddress2" class="form-label">Address 2</label>
+                            <input type="text" class="form-control" id="inputAddress2"
+                                placeholder="Apartment, studio, or floor">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputCity" class="form-label">City</label>
+                            <input type="text" class="form-control" id="inputCity">
+                        </div>
+                        <div class="col-md-4">
+                            <label for="inputState" class="form-label">State</label>
+                            <select id="inputState" class="form-select">
+                                <option selected>Choose...</option>
+                                <option>...</option>
+                            </select>
+                        </div>
+                        <div class="col-md-2">
+                            <label for="inputZip" class="form-label">Zip</label>
+                            <input type="text" class="form-control" id="inputZip">
+                        </div>
+                        <div class="col-12">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="gridCheck">
+                                <label class="form-check-label" for="gridCheck">
+                                    Check me out
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <button type="submit" class="btn btn-primary">Sign in</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-6">
+                    <table class="table table-bordered">
+                        <thead class="bg-primary" style="color: white;">
+                            <tr>
+                                <th scope="col">S.No</th>
+                                <th scope="col">Reg.No</th>
+                                <th scope="col">Name of the Participant</th>
+                                <th scope="col">Collaborative activity</th>
+                                <th scope="col">Collaborating Agency</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>URK16AE001</td>
+                                <td>ANIT ANU JOHN</td>
+                                <td>Product Design and Analysis</td>
+                                <td>CADD Centre</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>URK16AE011</td>
+                                <td>VASANTHA KANESH M</td>
+                                <td>Product Design and Analysis</td>
+                                <td>CADD Centre</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>URK16AE013</td>
+                                <td>ABIJITH J</td>
+                                <td>Product Design and Analysis</td>
+                                <td>CADD Centre</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">4</th>
+                                <td>URK16AE015</td>
+                                <td>JEBIN JOHN J</td>
+                                <td>Product Design and Analysis</td>
+                                <td>CADD Centre</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">5</th>
+                                <td>URK16AE018</td>
+                                <td>JOSHI K J</td>
+                                <td>Product Design and Analysis</td>
+                                <td>CADD Centre</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">6</th>
+                                <td>URK16AE020</td>
+                                <td>J P GOKUL</td>
+                                <td>Product Design and Analysis</td>
+                                <td>CADD Centre</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">7</th>
+                                <td>URK16AE021</td>
+                                <td>JEROME</td>
+                                <td>Product Design and Analysis</td>
+                                <td>CADD Centre</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">8</th>
+                                <td>URK16AE022</td>
+                                <td>AFNAN M. ARIEF</td>
+                                <td>Product Design and Analysis</td>
+                                <td>CADD Centre</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+        integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+        crossorigin="anonymous"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
+        integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
