@@ -16,29 +16,16 @@
     </p>
 
         <script>
-            function flip()
-            {
-                
-                var img = document.getElementById('coin');
-                var head = document.getElementById('num_head');
-                var tail = document.getElementById('num_tail');
-   
-                var h = parseInt(head.innerHTML);
-                var t = parseInt(tail.innerHTML);
-
-                var l = ["head.jpg","tail.jpg"];
-                var s = Math.floor(Math.random()*2);
-                
-                if (l[s]==l[0])
-                {
-                    head.innerHTML = h+1;
-                }
-                else{
-                    tail.innerHTML = t+1;
-                };
-
-                img.src ="img/"+l[s];
-            }
+            function flip() {
+    const idx = Math.floor(Math.random() * 2);
+    const img = ["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQx0-HN0T_lAY3yVseag7eUwBDpZ9U8uUHTGNIsC7gXCxag6RzeixMHmqc5fIOW70w-k64&usqp=CAU","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOECszcL_ZgMl7mEFv7_3NJzUleA_kh1ReR-uksl2reBqeYNsSiNFxY7OtdmZJcMgVHD0&usqp=CAU"]
+    if (idx == 0)
+    hc += 1;
+    else
+    tc += 1;
+    document.getElementById("coin").innerHTML = "<img src=" + img[idx] + "height=150 width=150" + ">"
+    document.getElementById("count").innerHTML = "Head Count: " + hc + "<br>" + "Tail Count: " + tc;
+   }
         </script>
     </body>
 </html>
