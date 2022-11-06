@@ -1,0 +1,26 @@
+.trapezoid {
+    border-bottom: 50px solid grey;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    height: 0;
+    width: 125px;
+    margin-left: 600px;
+
+}
+.circle {
+    height: 50px;
+    width: 50px;
+    background-color: grey;
+    border-radius: 50%;
+    display: inline-block;
+}
+.tyre {
+    margin-right: -10px;
+}
+.rectangle {
+    height: 60px;
+    width: 277px;
+    background-color: grey;
+    margin-left: 520px;
+
+}
