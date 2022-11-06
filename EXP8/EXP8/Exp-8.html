@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment-8</title>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+    <script type="text/javascript">
+        function myCtrl($scope) {
+            $scope.bmi_calc = function () {
+                var w = $scope.weight;
+                var h = $scope.height;
+                var bmi = w / (h * h);
+                if (bmi < 18.5) {
+                    $scope.output = 'Under weight';
+                } else if (bmi >= 18.5 && bmi < 25) {
+                    $scope.output = 'Normal';
+                } else if (bmi >= 25 && bmi < 30) {
+                    $scope.output = 'Over weight';
+                } else if (bmi > 30) {
+                    $scope.output = 'Obese';
+                }
+            }
+        };
+        function FrmController($scope) {
+            $scope.comment = [];
+            $scope.btn_add = function () {
+                if ($scope.txtcomment != "") {
+                    $scope.comment.push($scope.txtcomment);
+                    $scope.txtcomment = "";
+                }
+            }
+            $scope.remItem = function ($index) {
+                $scope.comment.splice($index, 1);
+            }
+        };
+        function todoController($scope) {
+            $scope.tasks = [];
+            $scope.Add = function () {
+                if ($scope.todoTask != "") {
+                    $scope.tasks.push($scope.todoTask);
+                    $scope.todoTask = "";
+                }
+            }
+            $scope.remitem = function ($index) {
+                $scope.tasks.splice($index, 1);
+            }
+        };
+    </script>
+    <script type="text/javascript">
+    angular.module('CalculatorApp', [])
+    .controller('CalculatorController', function ($scope) {
+        $scope.result = function () {
+            if ($scope.operator == '+') {
+                return $scope.a + $scope.b;
+            }
+            if ($scope.operator == '-') {
+                return $scope.a - $scope.b;
+            }
+            if ($scope.operator == '*') {
+                return $scope.a * $scope.b;
+            }
+            if ($scope.operator == '/') {
+                return $scope.a / $scope.b;
+            }
+        };
+    });
+</script>
+<style>
+    body{
+        padding-left: 15%;
+        color: white;
+    }
+    .div1 {
+        display: flexbox;
+        width: 80%;
+        background-color: black;
+        padding: 20px;
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+    .flex-container {
+        display: flexbox;
+        background-color: black;
+        padding-left: 20px;
+    }
+    .flex-container>button {
+        background-color: red;
+        margin: 5px;
+        padding: 5px;
+        font-size: 20px;
+    }
+</style>
+</head>
+<body ng-app="CalculatorApp">
+    <div class="div1" ng-app="">
+        <form ng-controller="FrmController">Post Your Comment <br>
+            <textarea ng-model="txtcomment" placeholder="Your Comment" style="width:550px"></textarea><br>
+            <button ng-click="btn_add();" style="margin-top:10px;">Post Comment</button>
+            <h4>Comments</h4>
+            <ul>
+                <li ng-repeat="comnt in comment">{{comnt}}
+                    <a style="float:right" href="" ng-click="remItem($index)">x</a>
+                </li>
+            </ul>
+        </form>
+    </div>
+    <div class="div1" ng-controller="CalculatorController">
+        <h4>Calculator</h4>
+        <p><input type="number" ng-model="a"></p>
+        <p><input type="number" ng-model="b"></p>
+        <p><select ng-model="operator">
+            <option>+</option>
+            <option>*</option>
+            <option>-</option>
+            <option>/</option>
+        </select></p>
+        <p>{{ result() }}</p>
+    </div>
+    <div class="div1" ng-controller="todoController">To-DO <br>
+        <textarea ng-model="todoTask" placeholder="tasks" style="width:550px"></textarea><br>
+        <button ng-click="Add();" style="margin-top:10px;">Add</button>
+        <h4>Tasks</h4>
+        <ul>
+            <li ng-repeat="t in tasks">{{t}}
+                <a style="float:right" href="" ng-click="remitem($index)">x</a>
+            </li>
+        </ul>
+        
+        </div>
+    </div>
+</body>
+</html>
