@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+  </head>
+  <body style="background-color: black; color: white;" >
+    <h1 style="color: rgba(225, 15, 15, 0.814);">Megaplay 2023 Registration Form!</h1>
+    <br>
+    <form action="/form" method="post" >
+      Name:<br><input type="text" name="name"><br><br>
+      Regno:<br><input type="text" name="regno"><br><br>
+      Year of Study:<br><input type="text" name="yr"><br><br>
+
+      Department:<br> 
+      <Select name="dept">
+        <option>CSE</option>
+        <option>ECE</option>
+        <option>MECH</option>
+        <option>CIVIL</option>
+        <option>AGRI</option>
+        <option>FOOD PRO</option>
+      </Select><br><br>
+
+      School: <br>
+      <Select name="school">
+        <option>Engineering</option>
+        <option>Managment</option>
+        <option>Media</option>
+        <option>Science and Humanity</option>
+        <option>Agriculture</option>
+      </Select><br><br>
+
+      Participating Event:<br>
+      <input type="checkbox" name="event" value="Musician">Musician
+      <input type = "checkbox" name = "event" value="Singing">Singing 
+      <input type = "checkbox" name = "event" value="Choreography">Choreography
+      <input type = "checkbox" name = "event" value="Backstage">Backstage
+      <input type = "checkbox" name = "event" value="Finance">Finance
+      <input type = "checkbox" name = "event" value="Purchase">Purchase
+      <input type = "checkbox" name = "event" value="Volunteer">Volunteer
+      <br><br>
+      
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>
