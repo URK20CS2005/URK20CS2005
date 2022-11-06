@@ -52,6 +52,7 @@ function student() {
         { name: 'Rohan', r_num: '123', dob: '31-aug-2003' },
         { name: 'Jascar', r_num: '456', dob: '24-aug-2003' },
         { name:'Vino',r_num:'789',dob:'06-apr-2003'}
+        { name:'sam',r_num:'098',dob:'11-sept-2002'}
     ];
     var str = ''
     for (var i = 0; i < stu_obj.length; i++) {
