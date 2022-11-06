@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment 9</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <!-- AngularJS CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <!-- Angular Routing Dependency -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+</head>
+<body class="bg-secondary text-light" ng-app="myapp" ng-controller="myctrl">
+    <h1 class="text-center p-5 text-black">Form Validation and Routing using Angular JS</h1>
+    <hr class="border border-black border-2 opacity-50">
+    <section id="Q1" >
+        <h3 class="text-center text-black bg mt-5">1. Registration Page</h3>
+        <div class="container col-sm-5 mt-5">
+            <form name="regForm">
+                <label for="t1" class="form-label text-black">Name <span class="text-danger">*</span></label>
+                <input type="text" name="name" ng-model="name" id="t1" class="form-control" required>
+                <span class="text-danger" ng-show="regForm.name.$invalid && regForm.name.$dirty">Name Required</span>
+                <span class="text-danger">{{checkName()}}</span>
+                <span class="text-danger">{{nm_error}}</span>
+                <br>
+                <label for="t2" class="form-label text-black">Password<span class="text-danger">*</span></label>
+                <input type="password" id="t2" class="form-control" name="psd" ng-model="psd" required>
+                <span class="text-danger" ng-show="regForm.psd.$invalid && regForm.psd.$dirty">Password Required</span>
+                <span class="text-danger">{{checkPass()}}</span>
+                <span class="text-danger" ng-show="regForm.psd.$valid">{{ps_error}}</span>
+                <br>
+                <label for="t3" class="form-label text-black">Age <span class="text-danger">*</span></label>
+                <input type="text" id="t3" class="form-control" ng-model="age" name="age" required>
+                <span class="text-danger" ng-show="regForm.age.$invalid && regForm.age.$dirty">Age Required</span>
+                <span class="text-danger">{{checkAge()}}</span>
+                <span class="text-danger" ng-show="regForm.age.$valid" >{{age_error}}</span>
+                <br>
+                <label for="t4" class="form-label text-black">Mobile No. <span class="text-danger">*</span></label>
+                <input type="tel" id="t4" class="form-control" ng-model="ph" name="ph" required>
+                <span class="text-danger" ng-show="regForm.ph.$invalid && regForm.ph.$dirty">Phone No. Required</span>
+                <span class="text-danger">{{checkMob()}}</span>
+                <span class="text-danger" ng-show="regForm.ph.$valid">{{mob_error}}</span>
+                <br>
+                <label for="t5" class="form-label text-black">E-Mail <span class="text-danger">*</span></label>
+                <input type="email" id="t5" class="form-control" ng-model="em" name="em" required>
+                <span class="text-danger" ng-show="regForm.em.$dirty && regForm.em.$error.required">Email Required</span>
+                <span class="text-danger" ng-show="regForm.em.$dirty && regForm.em.$error.email">Invalid Email</span><br>
+                <label for="male" class="form-label text-black">Gender <span class="text-danger">*</span></label>
+                <div>
+                    <center>
+                        <input class="form-check-input" type="radio" name="gender" ng-model="gender" value="male" id="male">
+                        <label class="form-check-label" for="male">Male</label>
+                        <input class="form-check-input ms-5" type="radio" name="gender" ng-model="gender" value="fmale" id="fmale">
+                        <label class="form-check-label" for="fmale">Female</label>
+                        <span class="text-danger">{{checkGender()}}</span>
+                        <span class="text-danger ps-4">{{gen_error}}</span>
+                    </center>
+                </div> <br>
+                <label for="state" class="form-label text-black">State <span class="text-danger">*</span></label>
+                <select class="form-select" id="state" aria-label="Default select example" ng-model="state">
+                    <option value="1">Tamil Nadu</option>
+                    <option value="2">kerala</option>
+                    <option value="3">Karnataka</option>
+                    <option value="3">Andhra Pradhesh</option>
+                </select>
+                <span class="text-danger">{{checkState()}}</span>
+                <span class="text-danger">{{st_error}}</span>
+            </form>
+            <div class="text-center mb-4">
+                <button ng-disabled="nm_error!='' || regForm.name.$invalid || regForm.psd.$invalid || ps_error!='' || regForm.age.$invalid || age_error!='' || myform.ph.$invalid || mob_error!='' || myform.em.$invalid || gen_error!='' || st_error!='' " class="btn btn-black mt-5">Submit</button>
+            </div>
+        </div>
+        <hr class="border border-grey border-2 opacity-50">
+    </section>
+    <section id="Q2" ng-app="calc">
+        <h3 class="text-center text-black bg mt-5">2.Routing</h3>
+        <div class="container col-sm-8 mt-5" align="center">
+            <center>
+                <div class="text-center col-sm-6 mt-5" >
+                    <a class="text-grey" href="#!rohan">ROHAN</a>
+                    <a class="text-grey" href="#!sam">SAM</a>
+                    <a class="text-grey" href="#!jascar">JASCAR</a>
+                    <a class="text-grey" href="#!vino">VINO</a>
+                </div>
+            </center>
+            <div ng-view class="mt-5">
+
+            </div>
+        </div>
+        <hr class="border border-grey border-2 opacity-50">
+    </section>
+    <script src="index.js"></script>
+</body>
+</html>
