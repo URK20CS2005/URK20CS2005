@@ -1,0 +1,36 @@
+.time-box{
+    text-align: center;
+    width: 500px;
+    height:100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    border-radius: 30px;
+    margin: 20px 0;
+    padding-left: 20px;
+    padding-right: 10px;
+    font-size: 40px;
+    background-color: aliceblue;
+    color: black;
+}
+.dynamic_bg{
+    height: 300px;
+    width: 300px;
+}
+.box{
+    position: relative;
+}
+.road-img{
+    height: 400px;
+    width: 100%;
+}
+.car-img{
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+    width: 200px;
+}
+.stud{
+    font-size: 30px;
+}

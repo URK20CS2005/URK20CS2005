@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+<div>
+<fieldset>
+   <legend><h1>Digital Clock</h1></legend>
+   <div id="time" class="time-box"></div>
+   <button onclick="start()">Current time</button>
+</fieldset>
+</div>
+<div>
+    <fieldset>
+    <legend><h1>Dynamic Background</h1></legend>
+    <div class="dynamic_bg" onload="color_ch()"></div>
+    </fieldset>
+</div>
+<div>
+<fieldset>
+    <legend><h1>Changing Font Size</h1></legend>
+    <p id="para1" onmouseover="incSize()" onmouseout="decSize()">move cursor over me to zoom in</p>
+</fieldset>
+</div>
+<div>
+    <fieldset>
+    <legend><h1>Move Car</h1></legend>
+    <div class="box">
+        <img src="road.jpeg" class="road-img" id="r-img">
+        <img src="car.png" class="car-img" id="c-img">
+    </div>
+    <button onclick="init(); moveRight();">Move</button>
+    <button onclick="stop()">Stop</button>
+    </fieldset>
+</div>
+<div>
+    <fieldset>
+    <legend><h1>Student Details</h1></legend>
+    <button onclick="student()">Show Student Details</button>
+    <span id="stu1" class="stud"></span>
+    <span id="stu2" class="stud"></span>
+    </fieldset>
+</div>
+   <script src="script.js"></script>
+</body>
+</html>
